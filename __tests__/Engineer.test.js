@@ -21,5 +21,5 @@ test('overrides employee role', () => {
     const engineer = new Engineer ('Navani', 'nkholin@uruthiru.com', 'NavaniKholin');
 
     // expect(engineer.role).toBe('Intern');
-    expect(engineer.getRole()).toBe('Intern');
+    expect(engineer.getRole()).toBe('Engineer');
 });
