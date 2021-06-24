@@ -6,6 +6,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generateHTML = require('./src/page-template');
+const {writeFile, copyFile} = require('./utils/generateSite');
 
 function Team() {
     this.manager;
@@ -65,7 +66,10 @@ Team.prototype.buildTeam = function () {
             }
             if (buildTeam === "I'm finished building my team.") {
                 console.log("I'm finished building my team");
-                //write data to file or return false?
+                //write the html
+                writeFile(generateHTML(teamArray));
+                //copy css file
+                copyFile();
             }
         })
 };
