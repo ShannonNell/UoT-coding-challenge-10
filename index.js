@@ -1,4 +1,3 @@
-// require generateHTML
 // require writeFile
 // require fs
 
@@ -6,6 +5,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generateHTML = require('./src/page-template');
 
 function Team() {
     this.manager;
@@ -23,11 +23,6 @@ Team.prototype.getManagerInfo = function () {
             name: 'name',
             message: "Welcome to the Team Profile Generator. What is the team manager's name?",
         },
-        // { //manager ID
-        //     type: 'input',
-        //     name: 'id',
-        //     message: "What is the team manager's employee ID number?",
-        // },
         { //manager email
             type: 'input',
             name: 'email',
@@ -49,12 +44,6 @@ Team.prototype.getManagerInfo = function () {
             console.log(teamArray);
             this.buildTeam();
         })
-    // .then(({ name, id, email, officeNum }) => { //name, id, email, officeNum check
-    //     this.manager = new Manager(name);
-    //     teamArray.push(manager);
-    //     console.log(teamArray);
-    // })
-    // .then(buildTeam); 
 };
 
 //build the team inquirer
@@ -91,11 +80,6 @@ Team.prototype.getEngineerInfo = function () {
             name: 'name',
             message: "What is the engineer's name?",
         },
-        // { //engineer ID
-        //     type: 'input',
-        //     name: 'id',
-        //     message: "What is the engineer's employee ID number?",
-        // },
         { //engineer email
             type: 'input',
             name: 'email',
@@ -128,11 +112,6 @@ Team.prototype.getInternInfo = function () {
             name: 'name',
             message: "What is the intern's name?",
         },
-        // { //intern ID
-        //     type: 'input',
-        //     name: 'id',
-        //     message: "What is the intern's ID number?",
-        // },
         { //intern email
             type: 'input',
             name: 'email',
