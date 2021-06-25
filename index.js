@@ -1,6 +1,3 @@
-// require writeFile
-// require fs
-
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -23,19 +20,43 @@ Team.prototype.getManagerInfo = function () {
             type: 'input',
             name: 'name',
             message: "Welcome to the Team Profile Generator. What is the team manager's name?",
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your manager's name!"); 
+                    return false;
+                }
+            }
         },
         { //manager email
             type: 'input',
             name: 'email',
             message: "What is the team manager's email?",
+            validate: emailInput => {
+                if(emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your manager's email!"); 
+                    return false;
+                }
+            }
         },
         { //manager office number
             type: 'input',
             name: 'officeNum',
             message: "What is the team manager's office number?",
+            validate: officeNumInput => {
+                if(officeNumInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your manager's office number!"); 
+                    return false;
+                }
+            }
         },
     ])
-        .then(({ name, email, officeNum }) => { //name, id, email, officeNum check
+        .then(({ name, email, officeNum }) => {
             this.manager = new Manager(
                 name,
                 email,
@@ -83,19 +104,43 @@ Team.prototype.getEngineerInfo = function () {
             type: 'input',
             name: 'name',
             message: "What is the engineer's name?",
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your engineer's name!"); 
+                    return false;
+                }
+            }
         },
         { //engineer email
             type: 'input',
             name: 'email',
             message: "What is the engineer's email?",
+            validate: emailInput => {
+                if(emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your engineer's email!"); 
+                    return false;
+                }
+            }
         },
         { //engineer office number
             type: 'input',
             name: 'gitHub',
             message: "What is the engineer's GitHub username?",
+            validate: gitHubInput => {
+                if(gitHubInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your engineer's gitHub username!"); 
+                    return false;
+                }
+            }
         },
     ])
-        .then(({ name, email, gitHub }) => { //name, id, email, gitHub?
+        .then(({ name, email, gitHub }) => {
             this.engineer = new Engineer(
                 name,
                 email,
@@ -115,19 +160,43 @@ Team.prototype.getInternInfo = function () {
             type: 'input',
             name: 'name',
             message: "What is the intern's name?",
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your intern's name!"); 
+                    return false;
+                }
+            }
         },
         { //intern email
             type: 'input',
             name: 'email',
             message: "What is the intern's email?",
+            validate: emailInput => {
+                if(emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your intern's email!"); 
+                    return false;
+                }
+            }
         },
         { //intern office number
             type: 'input',
             name: 'school',
             message: "What school does the intern attend?",
+            validate: schoolInput => {
+                if(schoolInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your intern's school!"); 
+                    return false;
+                }
+            }
         },
     ])
-        .then(({ name, email, school }) => { //name, id, email, school?
+        .then(({ name, email, school }) => { 
             this.intern = new Intern(
                 name,
                 email,
@@ -142,7 +211,4 @@ Team.prototype.getInternInfo = function () {
 new Team().getManagerInfo();
 
 
-
-//TODO:
-//validation
 
