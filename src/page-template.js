@@ -7,8 +7,11 @@ const generateCards = teamArray => {
             stringResponse += `
             <div class="card cards shadow-sm bg-light" style="width: 18rem;">
                 <div class="card-header text-white bg-primary mb-3">
-                    <h5 class="card-title"> ${element.name} </h5>
-                    <h6 class="card-subtitle mb-2">${element.role}</h6> 
+                    <h5 class="card-title"> ${element.name}</h5>
+                    <h6 class="card-subtitle mb-2">
+                        <i class="fas fa-mug-hot"></i>
+                        ${element.role}
+                    </h6> 
                 </div>
                 <div class="card-body">
                     <ul class="list-group shadow-sm">
@@ -27,7 +30,10 @@ const generateCards = teamArray => {
             <div class="card cards shadow-sm bg-light" style="width: 18rem;">
                 <div class="card-header text-white bg-primary mb-3">
                     <h5 class="card-title"> ${element.name} </h5>
-                    <h6 class="card-subtitle mb-2">${element.role}</h6> 
+                    <h6 class="card-subtitle mb-2">
+                        <i class="fas fa-glasses"></i>
+                        ${element.role}
+                    </h6> 
                 </div>
                 <div class="card-body">
                     <ul class="list-group shadow-sm">
@@ -48,7 +54,10 @@ const generateCards = teamArray => {
             <div class="card cards shadow-sm bg-light" style="width: 18rem;">
                 <div class="card-header text-white bg-primary mb-3">
                     <h5 class="card-title"> ${element.name} </h5>
-                    <h6 class="card-subtitle mb-2">${element.role}</h6> 
+                    <h6 class="card-subtitle mb-2">
+                        <i class="fas fa-user-graduate"></i>
+                        ${element.role}
+                    </h6> 
                 </div>
                 <div class="card-body">
                     <ul class="list-group shadow-sm">
