@@ -42,7 +42,7 @@ Team.prototype.getManagerInfo = function () {
                 officeNum
             );
             teamArray.push(this.manager);
-            console.log(teamArray);
+            // console.log(teamArray);
             this.buildTeam();
         })
 };
@@ -65,7 +65,7 @@ Team.prototype.buildTeam = function () {
                 this.getInternInfo();
             }
             if (buildTeam === "I'm finished building my team.") {
-                console.log("I'm finished building my team");
+                // console.log("I'm finished building my team");
                 //write the html
                 writeFile(generateHTML(teamArray));
                 //copy css file
@@ -77,7 +77,7 @@ Team.prototype.buildTeam = function () {
 
 //getEngineerInfo inquirer
 Team.prototype.getEngineerInfo = function () {
-    console.log("I'm an engineer");
+    // console.log("I'm an engineer");
     inquirer.prompt([
         { //engineer name
             type: 'input',
@@ -102,14 +102,14 @@ Team.prototype.getEngineerInfo = function () {
                 gitHub
             );
             teamArray.push(this.engineer);
-            console.log(teamArray);
+            // console.log(teamArray);
             this.buildTeam();
         })
 }
 
 //getInternInfo inquirer
 Team.prototype.getInternInfo = function () {
-    console.log("I'm an intern!");
+    // console.log("I'm an intern!");
     inquirer.prompt([
         { //intern name
             type: 'input',
@@ -134,7 +134,7 @@ Team.prototype.getInternInfo = function () {
                 school
             );
             teamArray.push(this.intern);
-            console.log(teamArray);
+            // console.log(teamArray);
             this.buildTeam();
         })
 }
@@ -145,6 +145,4 @@ new Team().getManagerInfo();
 
 //TODO:
 //validation
-//ID number organized
-//move team to own js file in lib?
-//phone number validation as 111-111-1111 || 1111111111 \\ 111 111 1111
+

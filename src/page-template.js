@@ -42,7 +42,7 @@ const generateCards = teamArray => {
                             Email: <a href="mailto:${element.email}">${element.email}</a>
                         </li>
                         <li class="list-group-item">
-                            GitHub: <a href="https://github.com/${element.gitHub}">${element.gitHub}</a>
+                            GitHub: <a href="https://github.com/${element.gitHub}" target="_blank">${element.gitHub}</a>
                         </li>
                     </ul>
                 </div>
@@ -95,10 +95,11 @@ const generateHTML = teamArray => {
             <h1>My Team</h2>
         </header>
         <main class="container">
-            <div class="row justify-content-center">
+            <div class="row2 justify-content-center">
                 ${generateCards(teamArray)}
             </div>
         </main> 
+        <script src="https://kit.fontawesome.com/09d19df594.js" crossorigin="anonymous"></script>
     </body>
     </html>   
     `

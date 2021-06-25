@@ -19,3 +19,7 @@ header h1 {
     flex-wrap: wrap;
     margin: 30px;
 }
+
+a {
+    text-decoration: none;
+}
