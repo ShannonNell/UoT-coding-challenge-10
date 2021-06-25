@@ -1,7 +1,7 @@
 # Challenge 10 OOP: Team Profile Generator
 
 ## Description
-A Node.js command-line app that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
+A Node.js command-line app that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. Team employees include Manager, Engineer, and Intern.
 
 Done as a challenge for UoT's Coding Bootcamp.
 ___
@@ -10,6 +10,8 @@ ___
 * [Installation](#installation)
 * [Usage](#usage)
 * [Links](#links)
+* [Features](#features)
+* [Tests](#tests)
 * [Tools](#tools)
 * [Credits](#credits)
 * [License](#license)
@@ -17,26 +19,38 @@ ___
 ___
 
 ## Installation
-
+Once you've cloned the repo, ensure Node.js is installed on your computer. Then you will need to install the required packages: inquirer, fs, and jest (should you wish to run the tests yourself). To install them, simply type `npm install <required-package>`. If installing jest, it is recommended to use `npm install --save-dev jest` as it is not required for deployment.
 ___
 
 ## Usage
+Use this application for building a roster for your team!
+
 Application invoked by using: `node index.js`
 
-![screenshotHere](/assets/images/)
+![screenshotHere](/assets/images/ch10_screenshot.png))
 ___
 
 ## Links
 ### Walkthrough of app:
-* [Video Walkthrough]()
+* [Video Walkthrough](https://drive.google.com/file/d/1K4szPknmiHZKZab4pf5CJsW2NB0gAeMz/view)
+___
+
+## Features
+The finished HTML and CSS files will be in the "dist" directory when the prompt is completed.
+___
+
+## Tests
+The Employee class (which other classes are extended from), Manager, Engineer, and Intern each have their own tests. You can run the tests by running `npm test` in the command line, which will run tests for all. If you want to run a specific test, run `npm test <testing.js>` where <testing.js> is replaced with the file name you wish to test. All files to be tested are located in the "lib" directory.
 ___
 
 ## Tools
-* node.js
 * JavaScript
-* Jest - for running tests
-* Inquirer - for collecgint input from user
-* Bootstrap - for layout
+* node.js
+* Jest
+* Inquirer 
+* fs
+* Bootstrap
+* FontAwesome
 ___
 
 ## Credits
