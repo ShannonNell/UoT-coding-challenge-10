@@ -10,6 +10,12 @@ header h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.team-card {
-    padding: 30px 10px 10px 10px;
+.cards{
+    margin: 10px 10px 0px 0px;
+}
+
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
 }

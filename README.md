@@ -36,6 +36,7 @@ ___
 * JavaScript
 * Jest - for running tests
 * Inquirer - for collecgint input from user
+* Bootstrap - for layout
 ___
 
 ## Credits

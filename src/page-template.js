@@ -5,13 +5,13 @@ const generateCards = teamArray => {
     teamArray.forEach(element => {
         if (element.role === 'Manager') {
             stringResponse += `
-            <div class="card" style="width: 18rem;">
+            <div class="card cards shadow-sm bg-light" style="width: 18rem;">
                 <div class="card-header text-white bg-primary mb-3">
                     <h5 class="card-title"> ${element.name} </h5>
                     <h6 class="card-subtitle mb-2">${element.role}</h6> 
                 </div>
                 <div class="card-body">
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group shadow-sm">
                         <li class="list-group-item">ID: ${element.id}</li>
                         <li class="list-group-item">
                             Email: <a href="mailto:${element.email}">${element.email}</a>
@@ -24,19 +24,19 @@ const generateCards = teamArray => {
         }
         if (element.role === 'Engineer') {
             stringResponse += `
-            <div class="card" style="width: 18rem;">
+            <div class="card cards shadow-sm bg-light" style="width: 18rem;">
                 <div class="card-header text-white bg-primary mb-3">
                     <h5 class="card-title"> ${element.name} </h5>
                     <h6 class="card-subtitle mb-2">${element.role}</h6> 
                 </div>
                 <div class="card-body">
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group shadow-sm">
                         <li class="list-group-item">ID: ${element.id}</li>
                         <li class="list-group-item">
                             Email: <a href="mailto:${element.email}">${element.email}</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="https://github.com/${element.gitHub}">${element.gitHub}</a>
+                            GitHub: <a href="https://github.com/${element.gitHub}">${element.gitHub}</a>
                         </li>
                     </ul>
                 </div>
@@ -45,13 +45,13 @@ const generateCards = teamArray => {
         }
         if (element.role === 'Intern') {
             stringResponse += `
-            <div class="card" style="width: 18rem;">
+            <div class="card cards shadow-sm bg-light" style="width: 18rem;">
                 <div class="card-header text-white bg-primary mb-3">
                     <h5 class="card-title"> ${element.name} </h5>
                     <h6 class="card-subtitle mb-2">${element.role}</h6> 
                 </div>
                 <div class="card-body">
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group shadow-sm">
                         <li class="list-group-item">ID: ${element.id}</li>
                         <li class="list-group-item">
                             Email: <a href="mailto:${element.email}">${element.email}</a>
@@ -85,8 +85,10 @@ const generateHTML = teamArray => {
         <header>
             <h1>My Team</h2>
         </header>
-        <main>
-            ${generateCards(teamArray)}
+        <main class="container">
+            <div class="row justify-content-center">
+                ${generateCards(teamArray)}
+            </div>
         </main> 
     </body>
     </html>   

@@ -32,7 +32,7 @@ Team.prototype.getManagerInfo = function () {
         { //manager office number
             type: 'input',
             name: 'officeNum',
-            message: "What is the team manager's office phone number?",
+            message: "What is the team manager's office number?",
         },
     ])
         .then(({ name, email, officeNum }) => { //name, id, email, officeNum check
