@@ -32,7 +32,7 @@ ___
 
 ## Links
 ### Walkthrough of app:
-* [Video Walkthrough](https://drive.google.com/file/d/1K4szPknmiHZKZab4pf5CJsW2NB0gAeMz/view)
+* [Video Walkthrough](https://drive.google.com/file/d/1d0KsXyK5v5kmLFYJ9jHWwOyIgnYbZti2/view)
 ___
 
 ## Features
